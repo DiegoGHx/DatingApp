@@ -46,7 +46,7 @@ public class AccountController(DataContext context) : BaseApiController
         using var hmac = new HMACSHA512(user.PasswordSalt);
         var computeHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(request.Password));
 
-        for (int i = 0; i < computeHash.Lenght; i++)
+        for (int i = 0; i < computeHash.Length; i++)
         {
             if (computeHash[i] != user.PasswordHash[i])
             {
