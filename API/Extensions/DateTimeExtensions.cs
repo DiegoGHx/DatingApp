@@ -1,6 +1,5 @@
 namespace API.Extensions;
-
-public class DateTimeExtensions
+public static class DateTimeExtensions
 {
     public static int CalculateAge(this DateOnly bd)
     {
